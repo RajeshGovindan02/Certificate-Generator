@@ -1,123 +1,34 @@
-<!-- <p align="center">
-  <b>Certificate Generator</b>
-</p> -->
-<br><br>
-<p align="center">
-  <img width ="70%" src="https://user-images.githubusercontent.com/61280281/134729891-673ca940-13dd-4c51-8597-ee576267d374.png">
-</p>
-<br>
-<p align="center"> A simple mass certificate generator script for the community ⚡ </p>
 
-<p align="center">
-  <br>
-  <a href="main.py">Source Code</a> &nbsp; · &nbsp; 
-  <a href="#docs">Docs</a> &nbsp; · &nbsp;
-  <a href="https://raw.githubusercontent.com/tusharnankani/CertificateGenerator/main/main.py">Raw Script</a>
-  <br>
-</p>
-<br>
+# Certificate Generator 
 
+Certificate Generator is a software application designed to automate the process of generating certificates for multiple individuals quickly and efficiently. It is built to streamline the certificate creation process, eliminating the need for manual work and saving significant time and effort.
 
-### Docs
+The Certificate Generator typically includes the following key features:
 
-All you need
+Data Input: The application allows users to input or import data related to the recipients of the certificates. This can include their names, dates, achievements, or any other relevant information.
 
-- Certificate
-  - Design a [simple template](template.png) on [Canva](https://www.canva.com/)
-- Font
-  - A .ttf (True-Type Font) file like [this](/font), can simply be downloaded from [here](https://www.google.com/search?q=download+.ttf+fonts).
-- Names
-  - Finally, a list of names in a .txt format or a .csv format.
+Template Selection: Users can choose from a variety of pre-designed certificate templates or create custom templates. These templates define the layout, design, and formatting of the certificates.
 
-<br>
+Data Merging: The Certificate Generator merges the inputted data with the selected template, populating the necessary fields on the certificates dynamically. This automation ensures that each certificate is personalized with accurate information for each recipient.
 
-### Pillow module
+Bulk Generation: The application supports generating certificates in bulk. Users can generate a large number of certificates at once, either by specifying the desired quantity or by importing recipient data from external sources such as spreadsheets or databases.
 
-Using the [pillow module](https://pypi.org/project/Pillow/) to make changes.
-<br>
+Output Options: The Certificate Generator provides options for exporting the generated certificates in various formats, such as PDF, JPEG, or PNG. This allows for easy distribution and printing of the certificates.
 
-- Calculating and declaring default values.
+## 🚀 About Me
+I'm Rajesh, I'm a Fresher
+
+## Feedback
+If you have any feedback, please reach out to us at rajeshgvr02@gmail.com
+
+## 🔗 Links
+[![dribbble](https://icons.veryicon.com/png/128/application/designer-treasure-chest/dribbble-94.png)](https://dribbble.com/Sparktechyfest)
+[![linkedin](https://icons.iconarchive.com/icons/limav/flat-gradient-social/128/Linkedin-icon.png)](https://www.linkedin.com/in/rajesh-g-ba6799207/)
+[![youtube](https://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png)](https://www.youtube.com/channel/UCiQgSz_rReZw6DuL-FC7J_g)
+
+## Screenshots
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
-```python
-from PIL import Image, ImageFont, ImageDraw
 
-'''Global Variables'''
-FONT_FILE = ImageFont.truetype(r'font/GreatVibes-Regular.ttf', 180)
-FONT_COLOR = "#FFFFFF"
-
-template = Image.open(r'template.png')
-WIDTH, HEIGHT = template.size
-```
-
-<br>
-
-- Placing the name on the certificate and saving to a different directory.
-
-```python
-def make_certificates(name):
-    '''Function to save certificates as a .png file
-    Finding the width and height of the text. 
-    Placing it in the center, then making some adjustments.
-    Saving the certificates in a different directory.
-    '''
-    
-    image_source = Image.open(r'template.png')
-    draw = ImageDraw.Draw(image_source)
-    name_width, name_height = draw.textsize(name, font=FONT_FILE)
-    draw.text(((WIDTH - name_width) / 2, (HEIGHT - name_height) / 2 - 30), name, fill=FONT_COLOR, font=FONT_FILE)
-    
-    image_source.save("./out/" + name +".png")
-    print('Saving Certificate of:', name)        
-
-```
-
-<br>
-
-### Names
-
-- Using `readlines()` method with a `.txt` format.
-
-```python
-names = []
-
-with open('names.txt') as f:
-    content = f.readlines()
-    for item in content:
-        names.append(item[:-1].title())
-```
-<br>
-
-- Using [pandas to read a `.csv` file](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html).
-
-```python
-import pandas
-names = pandas.read_csv('names.csv', sep='#')
-```
-
-<br>
-
-### Script in action
-
-<br>
-
-Template | Result
---- | ---
-<img src="template.png"> | <img src="out/Tushar Nankani.png">
-
-Design Courtesy [@GauravRaj](https://www.instagram.com/gauravraj0510)
-
-<br>
-
-### Future Scope?
-
-- More customisations
-- Directly e-mail as certificates are generated
-- A web interface?
-
-<br><br>
-
-#### Author
-
-[Tushar Nankani](https://tusharnankani.github.io/about/)
 
