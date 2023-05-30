@@ -27,8 +27,6 @@ If you have any feedback, please reach out to us at rajeshgvr02@gmail.com
 [![youtube](https://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png)](https://www.youtube.com/channel/UCiQgSz_rReZw6DuL-FC7J_g)
 
 ## Screenshots
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
+![02](https://github.com/RajeshGovindan02/Certificate-Generator/assets/113298736/d9c241ec-536d-4198-9f8c-202960c520f7)
 
 
